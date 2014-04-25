@@ -1,11 +1,11 @@
-lock '3.1.0'
+lock '3.2.1'
 
-set :application, 'HOSTNAME'
-set :repo_url, 'REPO' #git@github.com:BrandyMint/zagorod.git'
+set :application, 'cadcam.chebytoday.ru'
+set :repo_url, 'git@github.com:BrandyMint/cadcam.git'
 
 #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, ->{"/home/USERNAME/#{fetch(:application)}"}
+set :deploy_to, ->{"/home/wwwcadcam/#{fetch(:application)}"}
 set :scm, :git
 
 # set :format, :pretty

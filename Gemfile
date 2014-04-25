@@ -107,7 +107,7 @@ gem 'compass-rails'
 
 #assets
 # Use edge version of sprockets-rails
-gem 'sprockets-rails', github: 'rails/sprockets-rails'
+gem 'sprockets-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -245,7 +245,7 @@ group :test do
 end
 
 group :deploy do
-  gem 'capistrano', '~> 3.1', :require => false
+  gem 'capistrano', '~> 3.2', :require => false
   gem 'capistrano-rbenv', '~> 2.0',  :require => false
   gem 'capistrano-rails', '~> 1.1', :require => false
   gem 'capistrano-bundler', :require => false

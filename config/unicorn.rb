@@ -10,7 +10,7 @@ stderr_path APP_ROOT + "/log/unicorn.stderr.log"
 stdout_path APP_ROOT + "/log/unicorn.stdout.log"
 
 if rails_env=='production'
-    worker_processes 10
+    worker_processes 5
 end
 
 # Helps ensure the correct unicorn binary is used when upgrading with USR2
