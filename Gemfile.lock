@@ -148,6 +148,10 @@ GEM
       xpath (~> 2.0)
     capybara-screenshot (0.3.13)
       capybara (>= 1.0, < 3)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     celluloid-io (0.15.0)
@@ -478,6 +482,7 @@ GEM
       rspec-mocks (~> 2.14.0)
     ruby-graphviz (1.0.9)
     ruby-prof (0.13.0)
+    ruby_gntp (0.3.4)
     ruby_parser (3.2.2)
       sexp_processor (~> 4.1)
     sass (3.2.14)
@@ -590,6 +595,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.0)
   capybara
   capybara-screenshot
+  carrierwave
   coffee-rails!
   commands
   compass
@@ -602,6 +608,7 @@ DEPENDENCIES
   foreman
   grape!
   grape-cors!
+  grape-entity
   grape-swagger-rails
   guard (>= 2.4.0)
   guard-ctags-bundler
@@ -642,6 +649,7 @@ DEPENDENCIES
   quiet_assets
   rails (~> 4.0.0)
   rails-erd
+  rb-fsevent (~> 0.9.1)
   rb-inotify (~> 0.9)
   recipient_interceptor
   resque_spec
@@ -650,6 +658,7 @@ DEPENDENCIES
   rspec-prof
   rspec-rails (>= 2.11.0)
   ruby-graphviz
+  ruby_gntp
   ruby_parser (>= 2.3.1)
   sass-rails
   sdoc

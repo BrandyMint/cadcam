@@ -8,7 +8,7 @@ gem 'rails', '~> 4.0.0'
 gem 'grape', github: 'intridea/grape'
 gem 'grape-cors', github: 'cambridge-healthcare/grape-cors'
 gem 'grape-swagger-rails'
-#gem 'grape-entity'
+gem 'grape-entity'
 
 # Use postgresql as the database for ActiveRecord
 gem 'pg'
@@ -45,7 +45,7 @@ gem 'semver2'
 gem 'recipient_interceptor'
 
 #gem 'mini_magick'
-#gem 'carrierwave'
+gem 'carrierwave'
 
 # Контроллеры
 #gem 'has_scope'
