@@ -3,6 +3,7 @@ require 'spork'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
+
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
@@ -11,6 +12,7 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require 'simplecov'
   require 'simplecov-rcov'
+
   SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
   SimpleCov.start 'rails'
 
@@ -19,11 +21,6 @@ Spork.prefork do
   require 'rspec/autorun'
   require 'capybara-screenshot/rspec'
 
-  if ENV['PARALLEL_TEST_GROUPS']
-    Paperclip::Attachment.default_options[:path] = ":rails_root/public/system/:rails_env/#{ENV['TEST_ENV_NUMBER'].to_i}/:class/:attachment/:id_partition/:filename"
-  else
-    Paperclip::Attachment.default_options[:path] = ":rails_root/public/system/:rails_env/:class/:attachment/:id_partition/:filename"
-  end
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -79,7 +76,6 @@ Spork.prefork do
     end
     config.after(:each) do
       DatabaseCleaner.clean
-      `rm -rf "#{Rails.root}/public/system/#{Rails.env}"`
       #Hotel.tire.index.delete
       #Hotel.tire.create_elasticsearch_index
     end

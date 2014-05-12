@@ -1,7 +1,7 @@
 if defined? GrapeSwaggerRails
-  GrapeSwaggerRails.options.url      = '/api/swagger_doc.json'
+  GrapeSwaggerRails.options.url      = '/swagger_doc.json'
   GrapeSwaggerRails.options.app_name = 'Swagger'
-  GrapeSwaggerRails.options.app_url  = '/swagger'
+  GrapeSwaggerRails.options.app_url  = '/'
 
   #if Rails.env.development?
     #GrapeSwaggerRails.headers = { 'X-FairPrice-Key' => 'f71809f7311fc105bc1657c63e2c78e3ff6005c36b8d317a' }  #ipelican app key
