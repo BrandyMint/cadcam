@@ -19,10 +19,20 @@ Spork.prefork do
   require 'rspec/autorun'
   require 'capybara-screenshot/rspec'
 
+  if ENV['PARALLEL_TEST_GROUPS']
+    Paperclip::Attachment.default_options[:path] = ":rails_root/public/system/:rails_env/#{ENV['TEST_ENV_NUMBER'].to_i}/:class/:attachment/:id_partition/:filename"
+  else
+    Paperclip::Attachment.default_options[:path] = ":rails_root/public/system/:rails_env/:class/:attachment/:id_partition/:filename"
+  end
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+  RSpec.configure do |config|
+    config.include RSpec::Rails::RequestExampleGroup, type: :request, example_group: {
+      file_path: /spec\/api/
+    }
+  end
   # ResqueSpec.disable_ext = true
 
   RSpec.configure do |config|
@@ -69,6 +79,7 @@ Spork.prefork do
     end
     config.after(:each) do
       DatabaseCleaner.clean
+      `rm -rf "#{Rails.root}/public/system/#{Rails.env}"`
       #Hotel.tire.index.delete
       #Hotel.tire.create_elasticsearch_index
     end

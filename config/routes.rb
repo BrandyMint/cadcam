@@ -1,16 +1,16 @@
 CadCam::Application.routes.draw do
   self.default_url_options Settings.app.default_url_options.symbolize_keys
 
-  ## scope subdomain: 'api', constraints: { subdomain: 'api' } do
-  #mount GrapeSwaggerRails::Engine => '/api'
-  #mount API => '/api'
+  mount GrapeSwaggerRails::Engine => '/swagger'
+  mount API => '/api'
  
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   ActiveAdmin.routes(self)
 
-  root 'welcome#index'
+  root 'photos#index'
 
+  resources :photos, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

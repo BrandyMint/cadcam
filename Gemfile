@@ -46,6 +46,7 @@ gem 'recipient_interceptor'
 
 #gem 'mini_magick'
 gem 'carrierwave'
+gem "paperclip", "~> 4.1"
 
 # Контроллеры
 #gem 'has_scope'
