@@ -28,6 +28,7 @@ module CadCam
     # I18n.locale = config.i18n.default_locale = :ru
     config.i18n.fallbacks = true
 
+
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 

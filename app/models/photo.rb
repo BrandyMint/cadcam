@@ -5,11 +5,11 @@ class Photo < ActiveRecord::Base
 
   state_machine :state, initial: :hidden do
     event :show do
-      transition all => :displayed
+      transition :hidden => :displayed
     end
     
     event :hide do
-      transition all => :hidden
+      transition :displayed => :hidden
     end
   end
 
