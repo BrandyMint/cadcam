@@ -2,10 +2,10 @@ defaults: &defaults
   app:
     title: CadCam
 
-    asset_host: http://CadCam.icfdev.ru/
+    asset_host: http://cadcam.icfdev.ru/
 
     default_url_options: &default_url_options
-      host: HOSTNAME
+      host: cadcam.icfdev.ru
       port: 80
 
   action_mailer: &action_mailer
@@ -15,7 +15,7 @@ defaults: &defaults
 
   mailer_defaults: &mailer_defaults
     from: 'noreply@HOSTNAME'
-    host: HOSTNAME
+    host: cadcam.icfdev.ru
 
 development:
   <<: *defaults
