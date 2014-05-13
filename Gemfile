@@ -61,7 +61,7 @@ gem 'inherited_resources'
 gem 'active_link_to'
 
 #gem 'draper'
-#gem 'cells'
+gem 'cells'
 #gem 'breadcrumbs_on_rails'
 #gem 'tabulous'
 # gem 'authbuttons-rails'
@@ -100,7 +100,7 @@ gem 'haml-rails'
 gem 'jbuilder', '~> 1.0.1'
 
 #gem 'airbrake_user_attributes'
-gem 'airbrake', :github => 'airbrake/airbrake'
+#gem 'airbrake', :github => 'airbrake/airbrake'
 
 gem 'bootstrap-sass', '~> 3.0.2.0'
 gem 'compass'
@@ -207,10 +207,8 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'rb-inotify', '~> 0.9', :require => false
   gem "rspec-rails", ">= 2.11.0"
-  if RUBY_PLATFORM =~ /darwin/
-    gem 'rb-fsevent', '~> 0.9.1', require: false
-    gem 'ruby_gntp'
-  end
+  gem 'rb-fsevent', '~> 0.9.1', require: false
+  gem 'ruby_gntp'
 end
 
 
