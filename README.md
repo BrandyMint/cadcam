@@ -5,7 +5,7 @@ Android-приложение
 
 ### База и ассеты
 
-`  cap production db:pull`
-   cap production assets:pull
-   cap production app:pull
+    cap production db:pull
+    cap production assets:pull
+    cap production app:pull
 
