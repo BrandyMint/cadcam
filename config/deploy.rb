@@ -21,6 +21,10 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.1.1'
 
 set :bundle_without, %w{development test deploy}.join(' ')
+set :bundle_jobs, 10
+
+set :assets_dir, 'public/uploads/'
+set :local_assets_dir, 'public/uploads/'
 
 namespace :deploy do
 
