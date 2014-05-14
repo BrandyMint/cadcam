@@ -2,8 +2,8 @@ CadCam::Application.routes.draw do
   self.default_url_options Settings.app.default_url_options.symbolize_keys
 
   mount GrapeSwaggerRails::Engine => '/api'
-  mount API => '/'
- 
+  mount API => '/api'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   ActiveAdmin.routes(self)

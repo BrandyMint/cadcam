@@ -44,7 +44,7 @@ gem 'semver2'
 # Почта
 gem 'recipient_interceptor'
 
-#gem 'mini_magick'
+gem 'mini_magick'
 gem 'carrierwave'
 gem "paperclip", "~> 4.1"
 
@@ -60,9 +60,9 @@ gem 'inherited_resources'
 # Вьюхи и презентеры
 gem 'active_link_to'
 
-#gem 'draper'
+gem 'draper'
 gem 'cells'
-#gem 'breadcrumbs_on_rails'
+gem 'breadcrumbs_on_rails'
 #gem 'tabulous'
 # gem 'authbuttons-rails'
 
@@ -156,15 +156,15 @@ group :development do
   gem 'bond'
   gem 'jist'
   gem 'pry-rails'
-  gem 'pry-theme'
+  #gem 'pry-theme'
 
   gem 'pry-pretty-numeric'
   gem 'pry-syntax-hacks'
   gem 'pry-highlight'
-  gem 'pry-git'
-  gem 'pry-developer_tools'
+  #gem 'pry-git'
+  #gem 'pry-developer_tools'
 
-  gem 'pry-remote'
+  #gem 'pry-remote'
 
   gem 'rspec-console'
 

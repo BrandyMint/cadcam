@@ -4,9 +4,9 @@ FactoryGirl.define do
   factory :photo do
     latitude 1.5
     longitude 1.5
-    image "MyString"
+    image { Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, 'spec/fixtures/test.jpg'))) }
     comment "MyText"
-    device_id "MyString"
-    state "MyString"
+    device_id "device"
+    #state "MyString"
   end
 end
