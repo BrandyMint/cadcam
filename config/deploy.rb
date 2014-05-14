@@ -33,18 +33,6 @@ namespace :deploy do
     end
   end
 
-  desc 'Notify airbrake'
-  task :notify do
-    on roles(:all) do
-      within release_path do
-        execute :rake, 'airbrake:deploy', "TO=#{fetch(:rails_env)}",
-          "REVISION=\"`head -n1 #{repo_path}/FETCH_HEAD | cut -f1`\"",
-          "REPO=#{fetch(:repo_url)}",
-          "USER=#{ENV['USER'] || ENV['USERNAME']}"
-      end
-    end
-  end
-
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -56,6 +44,5 @@ namespace :deploy do
 
   after :publishing, :restart
   after :finishing, 'deploy:cleanup'
-  after :finishing, 'deploy:notify'
 
 end
