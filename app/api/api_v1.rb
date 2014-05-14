@@ -4,7 +4,7 @@ class API_v1 < Grape::API
   version 'v1'
   format :json
 
-  resource :photo do
+  resource :cadcam do
     params do
       requires :latitude,  type: Float
       requires :longitude, type: Float
