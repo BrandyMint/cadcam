@@ -1,7 +1,10 @@
 Android-приложение
 ------------------
 
-* http://hockey.brandymint.ru/
+*  http://hockey.brandymint.ru/
+
+![qr] (http://goo.gl/vIdWD0.qr)
+
 
 ### База и ассеты
 
