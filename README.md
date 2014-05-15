@@ -6,6 +6,8 @@ Android-приложение
 ![qr] (http://goo.gl/vIdWD0.qr)
 
 
+* [android app](https://github.com/BrandyMint/cadcam-android)
+
 ### База и ассеты
 
     cap production db:pull
