@@ -25,8 +25,9 @@ module CadCam
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     #
     # TODO :ru is not valid locale
-    # I18n.locale = config.i18n.default_locale = :ru
+    config.i18n.default_locale = :ru
     config.i18n.fallbacks = true
+    config.i18n.enforce_available_locales = false
 
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')

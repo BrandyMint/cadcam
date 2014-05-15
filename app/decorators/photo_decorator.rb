@@ -9,7 +9,15 @@ class PhotoDecorator < Draper::Decorator
     source.position.join ','
   end
 
+  def location
+    position
+  end
+
   def url
     h.photo_url source
+  end
+
+  def created_at
+    I18n.l source.created_at, format: :default
   end
 end

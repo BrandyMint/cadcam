@@ -1,6 +1,6 @@
 class Photo < ActiveRecord::Base
 
-  scope :ordered, -> { order :created_at }
+  scope :ordered, -> { order 'created_at desc' }
 
   mount_uploader :image, ImageUploader
 

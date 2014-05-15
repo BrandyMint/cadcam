@@ -1,5 +1,7 @@
 
 - @photos.each do |photo|
   = photo.image_tag
+  = photo.created_at
+  = photo.location
   = photo.comment
   %br
